@@ -1,0 +1,54 @@
+#include <iostream>
+#include <iomanip>
+#include <conio.h>
+using namespace std;
+int main()
+{
+char package;
+double hours;
+char a, b, c;
+cout<<"Good day!"<<endl;
+cout<< "Please select Package."<<endl;
+cout << "Package\t\tCost\t\tHours Provided\t\tAdditional Hours" << endl;
+cout << "A\t\tPhp995\t\t10\t\t\tPhp20 per hour" << endl;
+cout << "B\t\tPhp1495\t\t20\t\t\tPhp10 per hour" << endl;
+cout << "C\t\tPhp1995\t\tUnlimited Access\t\tNone" << endl;
+
+cout << "\nEnter the selected package: ";
+cin>> package;
+	while(package!='A' && package!='a' && package!='B' && package!='b' && package!='C' && package!='c')
+	{cout <<"\nInvalid! Please select package A, B or C";
+	cout << "\nEnter the selected package: ";
+	cin >> package; }
+
+cout << "\nEnter the number of hours used in a month:  ";
+cin>> hours;
+cout<< fixed<< showpoint<< setprecision(2);
+	while(hours <0 || hours > 744)
+	{cout <<"\nInvalid Input! cannot be negative and exceed to 744\n";
+	cout << "Enter the number of hours used in a month:  ";
+	cin >> hours; }
+
+
+if(package == 'A' || package == 'a')
+{if (hours <= 10)
+	cout<< "\nInternet Service Provider\n"<<"Package selected: A\n"<<"Hours used: "<< hours<<"\nYour monthly fee is: Php 995"<<endl;
+else 
+	
+	cout<< "\nInternet Service Provider\n"<<"Package selected: A\n"<<"Hours used: "<< hours<<"\nYour monthly fee is: Php "<<995+(hours-10)*20;}
+
+if(package == 'B' || package == 'b')
+{if (hours <= 20)
+	cout<< "\nInternet Service Provider\n"<<"Package selected: B\n"<<"Hours used: "<< hours<<"\nYour monthly fee is: Php 1495"<<endl;
+else 
+	
+	cout<< "\nInternet Service Provider\n"<<"Package selected: B\n"<<"Hours used: "<< hours<<"\nYour monthly fee is: Php "<<1495+(hours-20)*10;}
+
+if(package == 'C' || package == 'c')
+	cout<< "\nInternet Service Provider\n"<<"Package selected: C\n"<<"Hours used: "<< hours<<"\nYour monthly fee is: Php 1995"<<endl;
+
+
+
+	getch();
+	return 0;
+}
