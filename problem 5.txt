@@ -1,0 +1,25 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+    int f1, f2, n;
+    f1=0;
+    f2=1;
+    n=0;
+
+    cout << "Fibonacci Numbers:\n";
+    
+    while (n<=10)
+    {
+     cout << f1<< ", "<< f2 ;
+     	if (n<10)
+     		cout<< ", ";
+     		f1=f1 + f2;
+     		f2=f1+f2;
+			n++;
+    }
+    getch();
+    return 0;
+}
