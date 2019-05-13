@@ -1,0 +1,26 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+	int c;
+	cout << "Counting\n";
+	for (c=1;c<10;c++)
+	{
+		cout<< c; 
+		cout<< ", ";
+		
+	}
+	while (c <= 28) 
+	{
+		cout << c << ", ";
+		c = c + 2;
+	}
+	if (c == 30)
+	{
+		cout << c;
+		c= c+2;
+	}
+	getch();
+	return 0;
+}
