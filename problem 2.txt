@@ -1,0 +1,29 @@
+#include <iostream>
+#include <iomanip>
+#include <conio.h>
+using namespace std;
+int main()
+{
+	double cp, cr, pb;
+	double cost;
+	cout<<"Gallons reading in previous Month: ";
+	cin>>cp;
+	cout<< "Gallons reading in recent Month: ";
+	cin>> cr;
+		while (cr<cp)
+		{cout << "Invalid input, present reading must be greater than previous reading"; cout<< "\nGallons reading in recent Month:" << endl;
+		cin>> cr;
+		}
+	cout<<"Previous balance: ";
+	cin>>pb;
+	
+	if (pb>0)
+	cost=20+35+(1.1*(cr-cp))+pb;
+	else
+	cost=35+(1.1*(cr-cp));
+	cout<< fixed<< showpoint<< setprecision(2);
+	cout<< "\nYour water bill for this Month: Php "<< cost<< endl;
+	
+	getch();
+	return 0;
+}
